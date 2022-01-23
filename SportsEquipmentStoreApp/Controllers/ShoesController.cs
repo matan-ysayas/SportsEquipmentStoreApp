@@ -10,7 +10,7 @@ namespace SportsEquipmentStoreApp.Controllers
     public class ShoesController : Controller
 
     {
-      public static  string ConnecsionString = "Data Source=laptop-e49vkatt;Initial Catalog = SchoolAdoDB; Integrated Security = True; Pooling=False";
+        public static string ConnecsionString = "Data Source=.;Initial Catalog=SportStoreDB;Integrated Security=True;Pooling=False"; 
                SportStoreDBDataContext SportStoreDB = new SportStoreDBDataContext(ConnecsionString);
         // GET: Shoes
         public ActionResult Index()
@@ -20,7 +20,7 @@ namespace SportsEquipmentStoreApp.Controllers
         }
         public ActionResult AllShoes()
         {
-            SportStoreDB.Shoes.ToList();
+            
             return View(SportStoreDB.Shoes.ToList());
         }
     }
