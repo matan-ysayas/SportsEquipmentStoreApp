@@ -1,0 +1,24 @@
+﻿body {
+  
+}
+#container {
+    background-color:aqua;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    flex-wrap: wrap;
+}
+.shoesBox {
+    width:45%;
+    height:45%;
+    text-align:center;
+    border:solid black 1px;
+
+
+}
+.shoesBox img{
+    width:85%;
+    height:60%;
+}

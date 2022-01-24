@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace SportsEquipmentStoreApp.Controllers
 {
+
     public class ShoesController : Controller
 
     {
@@ -20,7 +21,10 @@ namespace SportsEquipmentStoreApp.Controllers
         }
         public ActionResult AllShoes()
         {
-            
+            return View(SportStoreDB.Shoes.ToList());
+        }
+        public ActionResult ManagerTable()
+        {
             return View(SportStoreDB.Shoes.ToList());
         }
     }

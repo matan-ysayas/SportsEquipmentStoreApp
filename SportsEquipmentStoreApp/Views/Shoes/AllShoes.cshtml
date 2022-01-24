@@ -2,21 +2,19 @@
 @{
     ViewBag.Title = "AllShoes";
 }
-
+<link rel="stylesheet" href="~/Content/style/AllShoesStyle.css" />
 <h2>AllShoes</h2>
-
-@foreach (Shoe shoe in Model)
-            {
-                <div>
-                    <h1>Type: @shoe.ShoeType</h1>
-                    <h1> Company:@shoe.Company</h1>
-                    <h1> Model:@shoe.Model</h1>
-                    <h1>Price:@shoe.Price</h1>
-                    <h1>Quantity:@shoe.Quantity</h1>
-                    <h1>onSale:@shoe.IsOnSale </h1>
-                    <img src="@shoe.ImageLink" />
-                </div>
-            }
+<div id="container">
+    @foreach (Shoe shoe in Model)
+    {
+    <div class="shoesBox">
+        <img src="@shoe.ImageLink" />
+        <h1>Type: @shoe.ShoeType</h1>
+        <h1> Company:@shoe.Company</h1>
+        <h1>Price:@shoe.Price</h1>
+    </div>
+    }
+</div>
 
 <table>
     <thead>Type</thead>
@@ -26,7 +24,7 @@
     <thead>Quantity</thead>
     <thead>onSale</thead>
     <thead>shoes img</thead>
-    @*@foreach (Shoe shoe1 in Model)
+    @foreach (Shoe shoe1 in Model)
     {
         <tbody>@shoe1.ShoeType</tbody>
         <tbody>@shoe1.Company</tbody>
@@ -35,5 +33,5 @@
         <tbody>@shoe1.Quantity</tbody>
         <tbody>@shoe1.IsOnSale</tbody>
         <tbody><img src="@shoe1.ImageLink" /></tbody>
-    }*@
+    }
 </table>
