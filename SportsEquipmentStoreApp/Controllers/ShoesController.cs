@@ -27,5 +27,10 @@ namespace SportsEquipmentStoreApp.Controllers
         {
             return View(SportStoreDB.Shoes.ToList());
         }
+        public ActionResult ShoesOnSale()
+        {
+            return View(SportStoreDB.Shoes.Where((item)=>item.IsOnSale==true).ToList());
+
+        }
     }
 }

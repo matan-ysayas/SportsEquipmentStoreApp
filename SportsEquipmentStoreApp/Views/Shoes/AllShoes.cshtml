@@ -1,37 +1,25 @@
-﻿@using SportsEquipmentStoreApp.Models;
+﻿<link rel="stylesheet" href="~/Content/style/CSS/shoesCSS/AllShoesStyle.css" />
+@using SportsEquipmentStoreApp.Models;
 @{
     ViewBag.Title = "AllShoes";
 }
-<link rel="stylesheet" href="~/Content/style/AllShoesStyle.css" />
-<h2>AllShoes</h2>
-<div id="container">
-    @foreach (Shoe shoe in Model)
-    {
-    <div class="shoesBox">
-        <img src="@shoe.ImageLink" />
-        <h1>Type: @shoe.ShoeType</h1>
-        <h1> Company:@shoe.Company</h1>
-        <h1>Price:@shoe.Price</h1>
-    </div>
-    }
-</div>
 
-<table>
-    <thead>Type</thead>
-    <thead>Company</thead>
-    <thead>Model</thead>
-    <thead>Price</thead>
-    <thead>Quantity</thead>
-    <thead>onSale</thead>
-    <thead>shoes img</thead>
-    @foreach (Shoe shoe1 in Model)
-    {
-        <tbody>@shoe1.ShoeType</tbody>
-        <tbody>@shoe1.Company</tbody>
-        <tbody>@shoe1.Model</tbody>
-        <tbody>@shoe1.Price</tbody>
-        <tbody>@shoe1.Quantity</tbody>
-        <tbody>@shoe1.IsOnSale</tbody>
-        <tbody><img src="@shoe1.ImageLink" /></tbody>
-    }
-</table>
+<div id="pageContianer">
+    <h2>AllShoes</h2>
+
+    <button type="button">@Html.ActionLink("Manager view", "ManagerTable", "Shoes")</button>
+    <button type="button">@Html.ActionLink("Shoes On Sale", "ShoesOnSale", "Shoes")</button>
+</div>
+   <div id="container">
+        @foreach (Shoe shoe in Model)
+        {
+            <div class="shoesBox">
+                <img src="@shoe.ImageLink" />
+                <h3>Type: @shoe.ShoeType</h3>
+                <h3> Company:@shoe.Company</h3>
+                <h3>Price:@shoe.Price</h3>
+            </div>
+        }
+
+    </div>
+

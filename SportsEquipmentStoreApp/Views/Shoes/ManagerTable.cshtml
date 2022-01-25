@@ -1,34 +1,37 @@
 ﻿@using SportsEquipmentStoreApp.Models;
-<link rel="stylesheet" href="~/Content/style/ManagerTableStyle.css"
+<link rel="stylesheet" href="~/Content/style/CSS/shoesCSS/ManagerTableStyle.css" />
 @{
     ViewBag.Title = "ManagerTable";
 }
 
-<h2>ManagerTable</h2>
+<div id="tableContainer" >
+
+    <h2>ManagerTable</h2>
 
 
-<table id="ManagerTable">
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Company</th>
-            <the>Model</the>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>onSale</th>
-            <th>shoes img</th>
-        </tr>
-    </thead>
-    @foreach (Shoe shoe1 in Model)
-    {
-        <tr>
-            <td>@shoe1.ShoeType</td>
-            <td>@shoe1.Company</td>
-            <td>@shoe1.Model</td>
-            <td>@shoe1.Price</td>
-            <td>@shoe1.Quantity</td>
-            <td>@shoe1.IsOnSale</td>
-            <td><img class="ImgTable" src="@shoe1.ImageLink" /></td>
-        </tr>
-    }
-</table>
+    <table id="ManagerTable">
+        <thead >
+            <tr>
+                <th>Type</th>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>onSale</th>
+                <th>shoes Img</th>
+            </tr>
+        </thead>
+        @foreach (Shoe shoe1 in Model)
+        {
+            <tr>
+                <td>@shoe1.ShoeType</td>
+                <td>@shoe1.Company</td>
+                <td>@shoe1.Model</td>
+                <td>@shoe1.Price</td>
+                <td>@shoe1.Quantity</td>
+                <td>@shoe1.IsOnSale</td>
+                <td><img class="ImgTable" src="@shoe1.ImageLink" /></td>
+            </tr>
+        }
+    </table>
+</div>

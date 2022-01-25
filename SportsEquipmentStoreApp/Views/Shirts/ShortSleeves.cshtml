@@ -1,0 +1,21 @@
+﻿<link rel="stylesheet" href="~/Content/style/CSS/shirtsCSS/ShirtsCradBoxStyle.css" />
+
+@using SportsEquipmentStoreApp.Models;
+@{
+    ViewBag.Title = "ShortSleeves";
+}
+<div id="pageContianer">
+    <h2>ShortSleeves</h2>
+</div>
+    <div class="cardContainer">
+        @foreach (Clothing shirt in Model)
+        {
+            <div class="cardBox">
+                <img src="@shirt.ImageLink" />
+                <h4>Type: @shirt.TypeOfClothing</h4>
+                <h4> Company:@shirt.Company</h4>
+                <h4>Price:@shirt.Price</h4>
+            </div>
+
+        }
+    </div>

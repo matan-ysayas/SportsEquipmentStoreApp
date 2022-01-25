@@ -8,5 +8,11 @@
         <elementListCompartment Id="12acfb35-ad2a-4c00-b51d-42438a91fa70" absoluteBounds="5.015, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="522c81cf-d301-4bf4-8b23-0374393d8aec" absoluteBounds="2.5, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SportStoreDBDataContext/Clothing" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d92e969-ff31-46e7-b492-877767ff6c89" absoluteBounds="2.515, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

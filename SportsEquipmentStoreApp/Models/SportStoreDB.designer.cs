@@ -33,6 +33,9 @@ namespace SportsEquipmentStoreApp.Models
     partial void InsertShoe(Shoe instance);
     partial void UpdateShoe(Shoe instance);
     partial void DeleteShoe(Shoe instance);
+    partial void InsertClothing(Clothing instance);
+    partial void UpdateClothing(Clothing instance);
+    partial void DeleteClothing(Clothing instance);
     #endregion
 		
 		public SportStoreDBDataContext() : 
@@ -70,6 +73,14 @@ namespace SportsEquipmentStoreApp.Models
 			get
 			{
 				return this.GetTable<Shoe>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Clothing> Clothings
+		{
+			get
+			{
+				return this.GetTable<Clothing>();
 			}
 		}
 	}
@@ -259,6 +270,284 @@ namespace SportsEquipmentStoreApp.Models
 					this._IsOnSale = value;
 					this.SendPropertyChanged("IsOnSale");
 					this.OnIsOnSaleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageLink", DbType="VarChar(MAX)")]
+		public string ImageLink
+		{
+			get
+			{
+				return this._ImageLink;
+			}
+			set
+			{
+				if ((this._ImageLink != value))
+				{
+					this.OnImageLinkChanging(value);
+					this.SendPropertyChanging();
+					this._ImageLink = value;
+					this.SendPropertyChanged("ImageLink");
+					this.OnImageLinkChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Clothing")]
+	public partial class Clothing : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _TypeOfClothing;
+		
+		private string _Gender;
+		
+		private string _Company;
+		
+		private string _Model;
+		
+		private System.Nullable<int> _Price;
+		
+		private System.Nullable<int> _Quantity;
+		
+		private System.Nullable<bool> _IsItShort;
+		
+		private System.Nullable<bool> _IsItDreyfit;
+		
+		private string _ImageLink;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnTypeOfClothingChanging(string value);
+    partial void OnTypeOfClothingChanged();
+    partial void OnGenderChanging(string value);
+    partial void OnGenderChanged();
+    partial void OnCompanyChanging(string value);
+    partial void OnCompanyChanged();
+    partial void OnModelChanging(string value);
+    partial void OnModelChanged();
+    partial void OnPriceChanging(System.Nullable<int> value);
+    partial void OnPriceChanged();
+    partial void OnQuantityChanging(System.Nullable<int> value);
+    partial void OnQuantityChanged();
+    partial void OnIsItShortChanging(System.Nullable<bool> value);
+    partial void OnIsItShortChanged();
+    partial void OnIsItDreyfitChanging(System.Nullable<bool> value);
+    partial void OnIsItDreyfitChanged();
+    partial void OnImageLinkChanging(string value);
+    partial void OnImageLinkChanged();
+    #endregion
+		
+		public Clothing()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeOfClothing", DbType="VarChar(50)")]
+		public string TypeOfClothing
+		{
+			get
+			{
+				return this._TypeOfClothing;
+			}
+			set
+			{
+				if ((this._TypeOfClothing != value))
+				{
+					this.OnTypeOfClothingChanging(value);
+					this.SendPropertyChanging();
+					this._TypeOfClothing = value;
+					this.SendPropertyChanged("TypeOfClothing");
+					this.OnTypeOfClothingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="VarChar(50)")]
+		public string Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
+					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="VarChar(50)")]
+		public string Company
+		{
+			get
+			{
+				return this._Company;
+			}
+			set
+			{
+				if ((this._Company != value))
+				{
+					this.OnCompanyChanging(value);
+					this.SendPropertyChanging();
+					this._Company = value;
+					this.SendPropertyChanged("Company");
+					this.OnCompanyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="VarChar(50)")]
+		public string Model
+		{
+			get
+			{
+				return this._Model;
+			}
+			set
+			{
+				if ((this._Model != value))
+				{
+					this.OnModelChanging(value);
+					this.SendPropertyChanging();
+					this._Model = value;
+					this.SendPropertyChanged("Model");
+					this.OnModelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int")]
+		public System.Nullable<int> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int")]
+		public System.Nullable<int> Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsItShort", DbType="Bit")]
+		public System.Nullable<bool> IsItShort
+		{
+			get
+			{
+				return this._IsItShort;
+			}
+			set
+			{
+				if ((this._IsItShort != value))
+				{
+					this.OnIsItShortChanging(value);
+					this.SendPropertyChanging();
+					this._IsItShort = value;
+					this.SendPropertyChanged("IsItShort");
+					this.OnIsItShortChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsItDreyfit", DbType="Bit")]
+		public System.Nullable<bool> IsItDreyfit
+		{
+			get
+			{
+				return this._IsItDreyfit;
+			}
+			set
+			{
+				if ((this._IsItDreyfit != value))
+				{
+					this.OnIsItDreyfitChanging(value);
+					this.SendPropertyChanging();
+					this._IsItDreyfit = value;
+					this.SendPropertyChanged("IsItDreyfit");
+					this.OnIsItDreyfitChanged();
 				}
 			}
 		}
