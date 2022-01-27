@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.cardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.cardBox {
+    width: 35%;
+    max-height: 66vh;
+    text-align: center;
+    border: solid black 1px;
+    margin-top: 5vh;
+}
+
+    .cardBox img {
+        width: 85%;
+        height: 66%;
+    }
+
+#pageContianer {
+    text-align: center;
+    background-color: aqua;
+}

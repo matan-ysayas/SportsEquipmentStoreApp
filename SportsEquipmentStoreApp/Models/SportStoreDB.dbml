@@ -26,4 +26,24 @@
       <Column Name="ImageLink" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SportsClubs" Member="SportsClubs">
+    <Type Name="SportsClub">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClubName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SportsClub_sportsEquipment" Member="sportsEquipments" ThisKey="Id" OtherKey="SportsClubId" Type="sportsEquipment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sportsEquipment" Member="sportsEquipments">
+    <Type Name="sportsEquipment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SportType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SportsClubId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageLink" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="SportsClub_sportsEquipment" Member="SportsClub" ThisKey="SportsClubId" OtherKey="Id" Type="SportsClub" IsForeignKey="true" />
+    </Type>
+  </Table>
 </Database>

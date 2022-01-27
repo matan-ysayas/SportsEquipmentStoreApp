@@ -1,0 +1,22 @@
+﻿@using SportsEquipmentStoreApp.Models;
+<link rel="stylesheet" href="~/Content/style/CSS/SportsEquipmentCSS/CradBoxStyle.css" />
+@{
+    ViewBag.Title = "SortedByPrice";
+}
+
+<div id="pageContianer">
+    <h2>SortedByPrice</h2>
+</div>
+
+<div class="cardContainer">
+    @foreach (sportsEquipment item in Model)
+    {
+        <div class="cardBox">
+            <img src="@item.ImageLink" />
+            <h4>Type: @item.ProductName</h4>
+            <h4> Company:@item.Company</h4>
+            <h4>Price:@item.Price</h4>
+        </div>
+
+    }
+</div>

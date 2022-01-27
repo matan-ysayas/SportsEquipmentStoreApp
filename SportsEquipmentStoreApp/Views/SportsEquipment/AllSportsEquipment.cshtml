@@ -1,0 +1,29 @@
+﻿@using SportsEquipmentStoreApp.Models;
+<link rel="stylesheet" href="~/Content/style/CSS/SportsEquipmentCSS/CradBoxStyle.css"/>
+@{
+    ViewBag.Title = "AllSportsEquipment";
+}
+
+<div id="pageContianer">
+    <h2>AllSportsEquipment</h2>
+
+    <button type="button">@Html.ActionLink("Manager view", "SportsEquipmentManagerTable", "SportsEquipment")</button>
+    <button type="button">@Html.ActionLink("Basketball Equipment", "BasketballEquipmentOnly", "SportsEquipment")</button>
+    <button type="button">@Html.ActionLink("Soccer Equipment", "SoccerEquipmentOnly", "SportsEquipment")</button>
+
+    <button type="button">@Html.ActionLink("Sort By Price", "SortedByPrice", "SportsEquipment")</button>
+</div>
+
+
+<div class="cardContainer">
+    @foreach (sportsEquipment item in Model)
+    {
+        <div class="cardBox">
+            <img src="@item.ImageLink" />
+            <h4>Type: @item.ProductName</h4>
+            <h4> Company:@item.Company</h4>
+            <h4>Price:@item.Price</h4>
+        </div>
+
+    }
+</div>

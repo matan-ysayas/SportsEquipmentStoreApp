@@ -138,6 +138,7 @@
     <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
+    <Compile Include="Controllers\SportsEquipmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,6 +158,7 @@
     <Content Include="Content\style\CSS\shoesCSS\AllShoesStyle.css" />
     <Content Include="Content\style\CSS\shirtsCSS\ShirtsCradBoxStyle.css" />
     <Content Include="Content\style\CSS\shoesCSS\ManagerTableStyle.css" />
+    <Content Include="Content\style\CSS\SportsEquipmentCSS\CradBoxStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,6 +213,11 @@
     <Content Include="Views\Pants\LongPants.cshtml" />
     <Content Include="Views\Pants\DreyfitOnly.cshtml" />
     <Content Include="Views\Pants\SortedByPrice.cshtml" />
+    <Content Include="Views\SportsEquipment\AllSportsEquipment.cshtml" />
+    <Content Include="Views\SportsEquipment\SportsEquipmentManagerTable.cshtml" />
+    <Content Include="Views\SportsEquipment\BasketballEquipmentOnly.cshtml" />
+    <Content Include="Views\SportsEquipment\SoccerEquipmentOnly.cshtml" />
+    <Content Include="Views\SportsEquipment\SortedByPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
