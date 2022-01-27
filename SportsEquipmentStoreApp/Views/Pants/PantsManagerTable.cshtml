@@ -1,0 +1,43 @@
+﻿<link rel="stylesheet" href="~/Content/style/CSS/shoesCSS/ManagerTableStyle.css" />
+@using SportsEquipmentStoreApp.Models;
+@{
+    ViewBag.Title = "PantsManagerTable";
+}
+
+
+
+<div id="tableContainer">
+
+    <h2>PantsManagerTable</h2>
+
+
+    <table id="ManagerTable">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Gender</th>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>If Short</th>
+                <th>If Dreyfit</th>
+                <th>Img</th>
+            </tr>
+        </thead>
+        @foreach (Clothing pants in Model)
+        {
+            <tr>
+                <td>@pants.TypeOfClothing</td>
+                <td>@pants.Gender</td>
+                <td>@pants.Company</td>
+                <td>@pants.Model</td>
+                <td>@pants.Price</td>
+                <td>@pants.Quantity</td>
+                <td>@pants.IsItShort</td>
+                <td>@pants.IsItDreyfit</td>
+                <td><img class="ImgTable" src="@pants.ImageLink"></td>
+            </tr>
+        }
+    </table>
+</div>

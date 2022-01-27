@@ -135,6 +135,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -152,6 +153,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style\CSS\pantsCSS\PantsCradBoxStyle.css" />
     <Content Include="Content\style\CSS\shoesCSS\AllShoesStyle.css" />
     <Content Include="Content\style\CSS\shirtsCSS\ShirtsCradBoxStyle.css" />
     <Content Include="Content\style\CSS\shoesCSS\ManagerTableStyle.css" />
@@ -203,6 +205,12 @@
     <Content Include="Views\Shirts\LongSleeves.cshtml" />
     <Content Include="Views\Shirts\DreyfitOnly.cshtml" />
     <Content Include="Views\Shirts\SortedByPrice.cshtml" />
+    <Content Include="Views\Pants\AllPants.cshtml" />
+    <Content Include="Views\Pants\PantsManagerTable.cshtml" />
+    <Content Include="Views\Pants\ShortPants.cshtml" />
+    <Content Include="Views\Pants\LongPants.cshtml" />
+    <Content Include="Views\Pants\DreyfitOnly.cshtml" />
+    <Content Include="Views\Pants\SortedByPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

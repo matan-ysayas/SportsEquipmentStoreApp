@@ -1,0 +1,27 @@
+﻿<link rel="stylesheet" href="~/Content/style/CSS/pantsCSS/PantsCradBoxStyle.css"/>
+@using SportsEquipmentStoreApp.Models;
+@{
+    ViewBag.Title = "AllPants";
+}
+<div id="pageContianer">
+    <h2>AllPants</h2>
+    <button type="button">@Html.ActionLink("Manager view", "PantsManagerTable", "Pants")</button>
+    <button type="button">@Html.ActionLink("Short Pants", "ShortPants", "Pants")</button>
+    <button type="button">@Html.ActionLink("Long Pants", "LongPants", "Pants")</button>
+    <button type="button">@Html.ActionLink("Dreyfit Only", "DreyfitOnly", "Pants")</button>
+    <button type="button">@Html.ActionLink("Sort By Price", "SortedByPrice", "Pants")</button>
+
+
+</div>
+    <div class="cardContainer">
+        @foreach (Clothing pants in Model)
+        {
+            <div class="cardBox">
+                <img src="@pants.ImageLink" />
+                <h4>Type: @pants.TypeOfClothing</h4>
+                <h4> Company:@pants.Company</h4>
+                <h4>Price:@pants.Price</h4>
+            </div>
+
+        }
+    </div>

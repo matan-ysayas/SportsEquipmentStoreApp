@@ -1,0 +1,22 @@
+﻿<link rel="stylesheet" href="~/Content/style/CSS/pantsCSS/PantsCradBoxStyle.css" />
+@using SportsEquipmentStoreApp.Models;
+@{
+    ViewBag.Title = "DreyfitOnly";
+}
+
+<div id="pageContianer">
+    <h2>DreyfitOnly</h2>
+</div>
+
+<div class="cardContainer">
+    @foreach (Clothing pants in Model)
+    {
+        <div class="cardBox">
+            <img src="@pants.ImageLink" />
+            <h4>Type: @pants.TypeOfClothing</h4>
+            <h4> Company:@pants.Company</h4>
+            <h4>Price:@pants.Price</h4>
+        </div>
+
+    }
+</div>
