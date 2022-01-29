@@ -1,19 +1,21 @@
-﻿@using SportsEquipmentStoreApp.Models;
+﻿<link rel="stylesheet" href="~/Content/style/CSS/shoesCSS/AllShoesStyle.css"/>
+@using SportsEquipmentStoreApp.Models;
 @{
     ViewBag.Title = "ShoesOnSale";
 }
-
-<h2>ShoesOnSale</h2>
-
-<div id="container">
+      <div id="pageContianer"> 
+<h2>Shoes On Sale</h2>
+          </div>
+<div class="cardContainer">
     @foreach (Shoe shoe in Model)
     {
-        <div class="shoesBox">
-            <img src="@shoe.ImageLink" />
-            <h1>Type: @shoe.ShoeType</h1>
-            <h1> Company:@shoe.Company</h1>
-            <h1>Price:@shoe.Price</h1>
-        </div>
+    <div class="cardBox">
+        <img src="@shoe.ImageLink" />
+        <h4>Type: @shoe.ShoeType</h4>
+        <h4> Company:@shoe.Company</h4>
+        <h4>Price:@shoe.Price</h4>
+        <button>add</button>
+    </div>
 
     }
 </div>

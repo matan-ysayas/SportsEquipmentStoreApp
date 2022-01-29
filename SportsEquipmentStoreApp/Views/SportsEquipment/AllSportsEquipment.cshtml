@@ -18,12 +18,13 @@
 <div class="cardContainer">
     @foreach (sportsEquipment item in Model)
     {
-        <div class="cardBox">
-            <img src="@item.ImageLink" />
-            <h4>Type: @item.ProductName</h4>
-            <h4> Company:@item.Company</h4>
-            <h4>Price:@item.Price</h4>
-        </div>
+    <div class="cardBox">
+        <img src="@item.ImageLink" />
+        <h4>Type: @item.ProductName</h4>
+        <h4> Company:@item.Company</h4>
+        <h4>Price:@item.Price</h4>
+        <button>add</button>
+    </div>
 
     }
 </div>

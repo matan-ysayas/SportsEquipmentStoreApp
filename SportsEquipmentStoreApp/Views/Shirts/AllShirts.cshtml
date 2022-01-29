@@ -7,13 +7,14 @@
 
 
 <div id="pageContianer"> 
-    <h2>AllShirts</h2>
-
-    <button type="button">@Html.ActionLink("Manager view", "ShirtsManagerTable", "Shirts")</button>
-    <button type="button">@Html.ActionLink("short Sleeves", "ShortSleeves", "Shirts")</button>
-    <button type="button">@Html.ActionLink("long Sleeves", "LongSleeves", "Shirts")</button>
-    <button type="button">@Html.ActionLink("Only Dreyfit", "DreyfitOnly", "Shirts")</button>
-    <button type="button">@Html.ActionLink("Sort By Price", "SortedByPrice", "Shirts")</button>
+    <h2>All Shirts</h2>
+    <div class="buttons">
+        <button type="button">@Html.ActionLink("Manager view", "ShirtsManagerTable", "Shirts")</button>
+        <button type="button">@Html.ActionLink("short Sleeves", "ShortSleeves", "Shirts")</button>
+        <button type="button">@Html.ActionLink("long Sleeves", "LongSleeves", "Shirts")</button>
+        <button type="button">@Html.ActionLink("Only Dreyfit", "DreyfitOnly", "Shirts")</button>
+        <button type="button">@Html.ActionLink("Sort By Price", "SortedByPrice", "Shirts")</button>
+    </div>
 </div>
 
 <div class="cardContainer">
@@ -21,9 +22,10 @@
     {
         <div class="cardBox">
             <img src="@shirt.ImageLink" />
-            <h4>Type: @shirt.TypeOfClothing</h4>
-            <h4> Company:@shirt.Company</h4>
-            <h4>Price:@shirt.Price</h4>
+            <h4><span> Type:</span> @shirt.TypeOfClothing</h4>
+            <h4><span> Company:</span>@shirt.Company</h4>
+            <h4><span>Price:</span>@shirt.Price</h4>
+            <button>add</button>
         </div>
 
     }

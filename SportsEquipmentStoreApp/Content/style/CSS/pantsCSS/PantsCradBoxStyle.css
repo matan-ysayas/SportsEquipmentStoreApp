@@ -14,16 +14,17 @@
     width: 35%;
     max-height: 66vh;
     text-align: center;
-    border: solid black 1px;
     margin-top: 5vh;
+    border-block-color: ActiveBorder;
 }
 
     .cardBox img {
         width: 85%;
         height: 66%;
+        border-radius: 10%;
     }
 
 #pageContianer {
     text-align: center;
-    background-color: aqua;
+ 
 }

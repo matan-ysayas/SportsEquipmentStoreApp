@@ -13,12 +13,13 @@
 <div class="cardContainer">
     @foreach (Clothing pants in Model)
     {
-        <div class="cardBox">
-            <img src="@pants.ImageLink" />
-            <h4>Type: @pants.TypeOfClothing</h4>
-            <h4> Company:@pants.Company</h4>
-            <h4>Price:@pants.Price</h4>
-        </div>
+    <div class="cardBox">
+        <img src="@pants.ImageLink" />
+        <h4>Type: @pants.TypeOfClothing</h4>
+        <h4> Company:@pants.Company</h4>
+        <h4>Price:@pants.Price</h4>
+        <button>add</button>
+    </div>
 
     }
 </div>

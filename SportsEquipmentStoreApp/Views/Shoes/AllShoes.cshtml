@@ -5,20 +5,21 @@
 }
 
 <div id="pageContianer">
-    <h2>AllShoes</h2>
+    <h2>All Shoes</h2>
 
     <button type="button">@Html.ActionLink("Manager view", "ManagerTable", "Shoes")</button>
     <button type="button">@Html.ActionLink("Shoes On Sale", "ShoesOnSale", "Shoes")</button>
 </div>
-   <div id="container">
+   <div class="cardContainer">
         @foreach (Shoe shoe in Model)
         {
-            <div class="shoesBox">
-                <img src="@shoe.ImageLink" />
-                <h3>Type: @shoe.ShoeType</h3>
-                <h3> Company:@shoe.Company</h3>
-                <h3>Price:@shoe.Price</h3>
-            </div>
+       <div class="cardBox">
+           <img src="@shoe.ImageLink" />
+           <h4>Type: @shoe.ShoeType</h4>
+           <h4> Company:@shoe.Company</h4>
+           <h4>Price:@shoe.Price</h4>
+           <button>add</button>
+       </div>
         }
 
     </div>

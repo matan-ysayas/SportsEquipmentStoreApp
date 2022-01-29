@@ -11,12 +11,13 @@
 <div class="cardContainer">
     @foreach (Clothing shirt in Model)
     {
-        <div class="cardBox">
-            <img src="@shirt.ImageLink" />
-            <h4>Type: @shirt.TypeOfClothing</h4>
-            <h4> Company:@shirt.Company</h4>
-            <h4>Price:@shirt.Price</h4>
-        </div>
+    <div class="cardBox">
+        <img src="@shirt.ImageLink" />
+        <h4>Type: @shirt.TypeOfClothing</h4>
+        <h4> Company:@shirt.Company</h4>
+        <h4>Price:@shirt.Price</h4>
+        <button>add</button>
+    </div>
 
     }
 </div>

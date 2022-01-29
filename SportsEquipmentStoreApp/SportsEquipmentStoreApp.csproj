@@ -222,6 +222,9 @@
     <Content Include="Content\style\CSS\shirtsCSS\ShirtsCradBoxStyle.css" />
     <Content Include="Content\style\CSS\shoesCSS\ManagerTableStyle.css" />
     <Content Include="Content\style\CSS\SportsEquipmentCSS\CradBoxStyle.css" />
+    <Content Include="Content\style\HomePageCSS.css" />
+    <Content Include="Content\style\Imges\indi con.jpeg" />
+    <Content Include="Content\style\Imges\tec career.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
