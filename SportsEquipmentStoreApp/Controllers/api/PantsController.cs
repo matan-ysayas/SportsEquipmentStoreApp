@@ -18,7 +18,7 @@ namespace SportsEquipmentStoreApp.Controllers.api
         {
             try
             {
-                return Ok(SportStoreDB.Clothings.Where((item) => item.TypeOfClothing == "shirt").ToList());
+                return Ok(SportStoreDB.Clothings.Where((item) => item.TypeOfClothing == "Pants").ToList());
 
             }
             catch (SqlException ex)
